@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self Improvement App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<meta name="description" content="Explore a self-improvement challenge and a brainstorming table for problem-solving strategies. Enhance life skills, tackle challenges, and reflect on incidents for growth. Get random challenges to enrich your personal development journey." />
+
+	<style>
+		.custom-border {
+			border: 2px solid #3498db; /* Change the color as desired */
+			border-radius: 15px; /* Adjust the border radius for the desired curvature */
+			padding: 20px; /* Adding padding for better visual */
+		}
+	</style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class = "container text-center">
+		<h1>Tools that help you in life...</h1>
+		<br><br>
+	</div>
+	
+	<div class="container text-center custom-border">
+		<h1>Brainstorming </h1>
+		<p>Asking the right question that help you to get idea on how to solve critical problem in fast. Through out this framework, you will get idea on what step need to be taken next to solve your difficult problem</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Incident</th>
+                    <th>Result</th>
+                    <th>What do you think</th>
+                    <th>Things that went well</th>
+                    <th>Things that need improvement</th>
+                    <th>Immediate action plan</th>
+                </tr>
+            </thead>
+            <tbody id="retrospectiveTable">
+                <tr style="font-style:italic;">
+                    <td>Example : I failed to discipline</td>
+                    <td>Resulted in delay of project deadline</td>
+                    <td>I should have set clearer goals and timelines for tasks.</td>
+                    <td>Team collaboration and communication were effective.</td>
+                    <td>Time management and task prioritization need improvement.</td>
+                    <td>Create a strict timetable and task schedule for the next phase.</td>
+                </tr>
+                <tr>
+                    <td><textarea class="form-control"></textarea></td>
+                    <td><textarea class="form-control"></textarea></td>
+                    <td><textarea class="form-control"></textarea></td>
+                    <td><textarea class="form-control"></textarea></td>
+                    <td><textarea class="form-control"></textarea></td>
+                    <td><textarea class="form-control"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="addRowBtn" class="btn btn-primary">Add Row</button>
+    </div>
+	<div class="container mt-5 text-center custom-border">
+		<h1 class="mb-4">Self-improvement challenge</h1>
+		<p>
+			Self-improvement needs to involve all aspects of life, such as career, relationships, health, financial security, and social skills.<br>
+			Click to get new ideas for challenges to improve your life.
+		</p>
+		<div class="row justify-content-center">
+			<div class="col-md-6 mb-4">
+				<div class="card">
+					<div class="card-body text-center custom-border">
+						<h5 class="card-title ">Random Challenge</h5>
+						<p class="card-text">
+							<button class="btn btn-primary" id="randomChallengeBtn">Get Challenge</button>
+						</p>
+						<p class="card-text" id="randomChallengeText"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class= "container text-center custom-border">
+		<form id="feedbackForm" action="https://script.google.com/macros/s/AKfycbxHQefQKgU5bVNMaDdbp_oP8mge0U2UAcvx2Y9M0c8kOJxpuCfJUbimgESUCeKJrZ2blg/exec" method="POST" >
+			<div class="form-group ">
+				<label for="feedbackInput">Please provide feedback so we understand what we need to improve:</label>
+				<textarea  style="max-width:600px;margin:auto;" id="moreDetails" name="details" class="form-control" placeholder="Your feedback"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+	</div>
+
+    <script src="app.js"></script> 
+
+</body>
+</html>
